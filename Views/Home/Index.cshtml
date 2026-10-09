@@ -1,0 +1,86 @@
+﻿@model DockerDemo.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="dashboard">
+    <header class="topbar">
+        <div class="brand-block">
+            <div class="brand-title">DOCKER DEMO</div>
+            <div class="brand-subtitle">From Code to Container</div>
+        </div>
+
+        <div class="running-pill" aria-label="Application status indicator">
+            <span class="status-dot"></span>
+            <span>RUNNING</span>
+        </div>
+    </header>
+
+    <main class="main-panel">
+        <section class="hero-section">
+            <div class="eyebrow">Developer workflow</div>
+            <h1>Your Application. Packaged and Ready to Run.</h1>
+            <p class="hero-copy">
+                A simple ASP.NET Core application to demonstrate how Docker makes application execution more consistent across environments.
+            </p>
+
+            <div class="hero-badge">● APPLICATION RUNNING</div>
+        </section>
+
+        <section class="info-grid" aria-label="Application information">
+            <article class="info-card">
+                <div class="card-label">Framework</div>
+                <div class="card-value">ASP.NET Core MVC</div>
+            </article>
+
+            <article class="info-card">
+                <div class="card-label">Runtime</div>
+                <div class="card-value">.NET 10</div>
+            </article>
+
+            <article class="info-card">
+                <div class="card-label">Environment</div>
+                <div class="card-value">@Model.EnvironmentLabel</div>
+            </article>
+
+            <article class="info-card">
+                <div class="card-label">Application Status</div>
+                <div class="card-value">@Model.ApplicationStatus</div>
+            </article>
+        </section>
+
+        <section class="environment-panel" aria-labelledby="environment-heading">
+            <div id="environment-heading" class="panel-title">CURRENT EXECUTION ENVIRONMENT</div>
+
+            <div class="environment-row">
+                <span class="environment-badge">@Model.EnvironmentLabel</span>
+                <p>@Model.EnvironmentMessage</p>
+            </div>
+        </section>
+
+        <section class="journey-section" aria-labelledby="journey-heading">
+            <div id="journey-heading" class="panel-title">DOCKER JOURNEY</div>
+
+            <div class="journey-stream" aria-label="Docker journey from source code to running app">
+                <span class="journey-node">SOURCE CODE</span>
+                <span class="journey-arrow">→</span>
+                <span class="journey-node">DOCKERFILE</span>
+                <span class="journey-arrow">→</span>
+                <span class="journey-node">IMAGE</span>
+                <span class="journey-arrow">→</span>
+                <span class="journey-node">CONTAINER</span>
+                <span class="journey-arrow">→</span>
+                <span class="journey-node accent-node">RUNNING APP</span>
+            </div>
+
+            <p class="journey-copy">
+                An image is the packaged artifact. A container is a running instance of that image.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>Built for learning. Powered by ASP.NET Core.</span>
+        <span class="brand-mark">The Dhruv Stack</span>
+    </footer>
+</div>
