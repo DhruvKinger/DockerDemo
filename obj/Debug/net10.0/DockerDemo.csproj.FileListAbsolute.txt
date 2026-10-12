@@ -95,3 +95,4 @@
 /Users/dhruvkinger/DockerDemo/obj/Debug/net10.0/DockerDemo.pdb
 /Users/dhruvkinger/DockerDemo/obj/Debug/net10.0/DockerDemo.genruntimeconfig.cache
 /Users/dhruvkinger/DockerDemo/obj/Debug/net10.0/ref/DockerDemo.dll
+/Users/dhruvkinger/DockerDemo/obj/Debug/net10.0/DockerDemo.sourcelink.json
